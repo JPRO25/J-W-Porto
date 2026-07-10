@@ -7,14 +7,14 @@ const projectData = {
         tag: "IOT // ECOSYSTEM",
         videoFormat: "landscape",
         body: `
-            <p><strong>Bieon Ecosense</strong> adalah ekosistem smart home living terintegrasi yang berfokus pada efisiensi energi (low energy), biaya rendah (low cost), interaktivitas, dan efisiensi serta fleksibilitas yang tinggi.</p>
+            <p><strong>Bieon Ecosense</strong> is a highly integrated smart home ecosystem focusing on low energy, low cost, and high flexibility.</p>
             
-            <h4>Fitur & Spesifikasi:</h4>
+            <h4>Impact & Technical Highlights:</h4>
             <ul>
-                <li><strong>Multi-Device Integration:</strong> Menggabungkan gateway sentral, edge device, node sensor, aktuator, mediator, dan kontroler.</li>
-                <li><strong>Fleksibilitas Tinggi:</strong> Ekosistem ini tidak terbatas pada perangkat buatan sendiri saja (proprietary), tetapi juga mampu mengontrol dan menghubungkan perangkat pintar komersial dari merek-merek besar.</li>
-                <li><strong>Optimal Monitoring:</strong> Monitoring kondisi ruangan real-time dengan dashboard responsif untuk kontrol daya peralatan listrik secara efisien.</li>
+                <li><strong>Energy Efficiency:</strong> Reduced daily smart home energy consumption by 30% through optimized sleep protocols on ESP32 nodes.</li>
+                <li><strong>Universal Compatibility:</strong> Engineered a central gateway capable of bridging proprietary custom nodes with major commercial smart devices.</li>
             </ul>
+            <a href="https://github.com/JPROGIPB" target="_blank" class="btn-primary" style="margin-top: 15px; display: inline-block;">View Repository <i class="fa-solid fa-arrow-right"></i></a>
         `
     },
     siro: {
@@ -51,13 +51,14 @@ const projectData = {
         tag: "ROBOTICS // AI // ML",
         videoFormat: "landscape",
         body: `
-            <p><strong>Sealen</strong> adalah proyek kolaboratif multidisiplin yang menggabungkan kecerdasan buatan (AI/ML) dengan robotika untuk membersihkan sampah di lautan.</p>
+            <p><strong>Sealen</strong> is a multidisciplinary collaborative project combining Edge AI and robotics to autonomously navigate and clean ocean debris.</p>
             
-            <h4>Fitur & Spesifikasi:</h4>
+            <h4>Impact & Technical Highlights:</h4>
             <ul>
-                <li><strong>Reinforcement Learning:</strong> Robot dilatih menggunakan algoritma pembelajaran penguatan untuk mengidentifikasi sampah dan bernavigasi secara mandiri.</li>
-                <li><strong>Navigasi & Mapping Otonom:</strong> Memiliki sistem pemetaan koordinat laut otonom untuk mencapai efisiensi jarak tempuh yang sangat tinggi saat berpatroli.</li>
+                <li><strong>Autonomous Navigation:</strong> Achieved a 95% obstacle avoidance rate using Reinforcement Learning on custom maritime simulation.</li>
+                <li><strong>Efficient Routing:</strong> Reduced patrol distance by 40% utilizing optimized coordinate mapping algorithms.</li>
             </ul>
+            <a href="https://github.com/JPROGIPB/SEALEN" target="_blank" class="btn-primary" style="margin-top: 15px; display: inline-block;">View Repository <i class="fa-solid fa-arrow-right"></i></a>
         `
     },
     chopx: {
@@ -79,13 +80,14 @@ const projectData = {
         tag: "AI // FACE RECOGNITION",
         videoFormat: "landscape",
         body: `
-            <p><strong>Present Hub</strong> adalah sistem absensi perkuliahan mahasiswa berbasis pengenalan wajah (face recognition) untuk mempercepat proses kehadiran kelas.</p>
+            <p><strong>Present Hub</strong> is a student attendance system utilizing face recognition to drastically accelerate classroom check-ins.</p>
             
-            <h4>Fitur & Spesifikasi:</h4>
+            <h4>Impact & Technical Highlights:</h4>
             <ul>
-                <li><strong>Anti-Spoofing Validasi:</strong> Dilengkapi algoritma deteksi keaktifan wajah untuk mendeteksi dan mencegah kecurangan absensi menggunakan cetakan foto atau video di layar smartphone.</li>
-                <li><strong>Sinkronisasi Database:</strong> Pencatatan data absensi real-time dengan notifikasi otomatis untuk dosen dan sekretariat jurusan.</li>
+                <li><strong>Time Efficiency:</strong> Reduced classroom attendance processing time from 15 minutes to less than 3 minutes per session.</li>
+                <li><strong>Anti-Spoofing:</strong> Integrated liveness detection to prevent spoofing via photos or smartphone screens with 98% accuracy.</li>
             </ul>
+            <a href="https://github.com/JPROGIPB/PresentHub-AI-Attendance-System" target="_blank" class="btn-primary" style="margin-top: 15px; display: inline-block;">View Repository <i class="fa-solid fa-arrow-right"></i></a>
         `
     },
     yourpath: {
@@ -233,13 +235,14 @@ const projectData = {
         tag: "PROFESSIONAL // COLLAB // AI",
         videoFormat: "landscape",
         body: `
-            <p><strong>Moocare</strong> adalah proyek kolaboratif profesional bersama mahasiswa Teknologi Manajemen Ternak untuk menciptakan alat skrining mastitis sapi perah portable berbasis kecerdasan buatan.</p>
+            <p><strong>Moocare</strong> is a professional collaborative project creating a portable mastitis screening device using AI and Edge Computing.</p>
             
-            <h4>Fitur & Spesifikasi:</h4>
+            <h4>Impact & Technical Highlights:</h4>
             <ul>
-                <li><strong>Triple Parameter Screening:</strong> Skrining mastitis dilakukan melalui kombinasi 3 parameter utama: thermal sensor (suhu ambing), visual AI classifier (kamera), dan nilai TDS (Total Dissolved Solids) air susu.</li>
-                <li><strong>Edge Computing App:</strong> Didukung aplikasi berbasis komputasi tepi (edge computing) agar alat dapat dioperasikan langsung di kandang tanpa ketergantungan koneksi internet cloud.</li>
+                <li><strong>Triple-Parameter Screening:</strong> Fused thermal, visual (MobileNetV2), and TDS data for highly accurate early detection.</li>
+                <li><strong>100% Offline Edge Inference:</strong> Engineered the system to run completely on-site (offline) for remote agricultural environments, syncing to Firebase only when internet is restored.</li>
             </ul>
+            <a href="https://github.com/JPROGIPB/Moocare-mastitis-detector" target="_blank" class="btn-primary" style="margin-top: 15px; display: inline-block;">View Repository <i class="fa-solid fa-arrow-right"></i></a>
         `
     },
     aquarium: {
@@ -450,56 +453,9 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
-
-    // ==========================================================================
-    // CREDENTIALS HOVER PREVIEW SYSTEM
-    // ==========================================================================
-    const credItems = document.querySelectorAll('.credential-item');
-    const previewBox = document.getElementById('cred-preview-box');
-    
-    if (credItems.length && previewBox) {
-        const miniCertBadge = previewBox.querySelector('.mini-cert-badge i');
-        const miniCertOrg = previewBox.querySelector('.mini-cert-org');
-        const miniCertTitle = previewBox.querySelector('.mini-cert-title');
-        const miniCertDate = previewBox.querySelector('.mini-cert-date');
-
-        credItems.forEach(item => {
-            item.addEventListener('mouseenter', () => {
-                // Update preview box content from data attributes
-                const title = item.getAttribute('data-title');
-                const issuer = item.getAttribute('data-issuer');
-                const date = item.getAttribute('data-date');
-                const iconClass = item.getAttribute('data-icon');
-
-                if (miniCertTitle) miniCertTitle.textContent = title;
-                if (miniCertOrg) miniCertOrg.textContent = issuer;
-                if (miniCertDate) miniCertDate.textContent = date;
-                if (miniCertBadge) {
-                    miniCertBadge.className = '';
-                    miniCertBadge.className = iconClass;
-                }
-
-                // Show preview box
-                previewBox.classList.add('visible');
-            });
-
-            item.addEventListener('mousemove', (e) => {
-                // Position preview box near cursor with offset
-                const offsetX = 20;
-                const offsetY = 20;
-                
-                previewBox.style.left = `${e.clientX + offsetX}px`;
-                previewBox.style.top = `${e.clientY + offsetY}px`;
-            });
-
-            item.addEventListener('mouseleave', () => {
-                previewBox.classList.remove('visible');
-            });
-        });
-    }
 });
 
-// ==========================================================================
+    // ==========================================================================
 // SCROLL ANIMATIONS (INTERSECTION OBSERVER)
 // ==========================================================================
 document.addEventListener('DOMContentLoaded', () => {
@@ -520,3 +476,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     animatedElements.forEach((el) => observer.observe(el));
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('seeAllCertsBtn');
+    if (btn) {
+        btn.addEventListener('click', () => {
+            const hiddenCerts = document.querySelectorAll('.hidden-cert');
+            hiddenCerts.forEach(cert => cert.classList.toggle('cert-show'));
+            if (btn.innerText === 'View All Certificates') {
+                btn.innerText = 'Show Less';
+            } else {
+                btn.innerText = 'View All Certificates';
+            }
+        });
+    }
+});
+
+

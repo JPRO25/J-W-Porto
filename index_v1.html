@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portofolio Personal Julman Waruwu - IoT & Smart Systems Engineer. Desain cerah minimalis bertema editorial.">
+    <title>Julman Waruwu | IoT & Smart Systems Engineer</title>
+    
+    <!-- Google Fonts: Lora (Serif), Plus Jakarta Sans (Body), & Space Mono (Metadata Labels) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Devicon Icons (Colored Technology Badges) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- ==========================================
+         TOP NAVIGATION HEADER (Sticky Glassmorphism Navbar)
+         ========================================== -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-text">J<span>•</span>W</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#hero-sec" class="nav-link active">Home</a>
+            <a href="#about-sec" class="nav-link">About</a>
+            <a href="#skills-sec" class="nav-link">Skills</a>
+            <a href="#portfolio-sec" class="nav-link">Portfolio</a>
+            <a href="#credentials-sec" class="nav-link">Certificates</a>
+            <a href="#contact-sec" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <!-- ==========================================
+         MAIN UNIFIED WRAPPER (Single Column Layout)
+         ========================================== -->
+    <main class="main-wrapper split-layout-wrapper">
+        <div class="split-left">
+
+        <!-- 00. Hero Section -->
+        <section class="hero-section" id="hero-sec">
+            <div class="hero-container">
+                <div class="hero-left">
+                    <div style="margin-bottom: 2rem;">
+                        <span style="font-family: var(--font-primary); font-size: 0.9rem; color: #ffffff; font-weight: 600;">J.W</span><br>
+                        <span style="font-family: var(--font-primary); font-size: 0.8rem; color: var(--text-secondary); font-weight: 500;">Portofolio<br>Archive</span>
+                    </div>
+                    <h1 class="hero-title" style="font-family: var(--font-primary); font-size: 3.5rem; font-weight: 300; letter-spacing: -1px; margin-top: 1rem; margin-bottom: 1rem; line-height: 1.15; color: #ffffff;">Julman<br>Waruwu</h1>
+                    <p class="hero-subtitle" style="font-family: var(--font-primary); font-size: 1.05rem; color: var(--text-secondary); font-weight: 300; max-width: 400px; line-height: 1.6; margin-bottom: 2.5rem;">
+                        Pursue real career paths through intelligent automation and edge AI systems built for the future.
+                    </p>
+                    
+                    <div class="hero-actions" style="display: flex; gap: 1rem; align-items: center; margin-bottom: 2.5rem;">
+                        <a href="#contact-sec" class="btn-contact-me" style="background: transparent; color: #ffffff; border: 1px solid rgba(255,255,255,0.3); padding: 0.7rem 2rem; border-radius: 30px; font-weight: 400; transition: all 0.3s;">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-right hero-graphic-container">
+                    <svg class="abstract-wave" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#00e5ff" />
+                                <stop offset="50%" stop-color="#3b82f6" />
+                                <stop offset="100%" stop-color="#ff007f" />
+                            </linearGradient>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        <!-- A complex tech-looking wavy path -->
+                        <path class="wave-path" d="M421.5,339.5Q386,429,285.5,444.5Q185,460,113,383Q41,306,75,207.5Q109,109,207.5,73Q306,37,381.5,108.5Q457,180,421.5,339.5Z" fill="none" stroke="url(#waveGradient)" stroke-width="6" filter="url(#glow)"/>
+                        <path class="wave-path-2" d="M439.5,338.5Q379,427,276.5,431Q174,435,110.5,357Q47,279,77.5,177.5Q108,76,211.5,58.5Q315,41,407.5,110.5Q500,180,439.5,338.5Z" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+                    </svg>
+                    <!-- Floating Shapes -->
+                    <div class="shape pill-magenta"></div>
+                    <div class="shape circle-blue"></div>
+                    <div class="shape badge-orange"></div>
+                    <div class="shape square-cyan"></div>
+                </div>
+            </div>
+        </section>
+        </div>
+
+        <div class="split-right">
+        <!-- 01. About Section -->
+        <section class="about-section" id="about-sec">
+            <div class="section-meta-label">[ 01 // PROFILE ]</div>
+            <h2 class="section-title">About Me</h2>
+            <div class="title-line"></div>
+            <p class="about-description">
+                Saya mendedikasikan diri untuk merancang dan membangun sistem otomasi pintar (<strong>IoT</strong>) serta sistem tertanam (<strong>Embedded Systems</strong>). Didukung kemampuan di bidang <strong>Aplikasi Web (React/Node.js)</strong>, <strong>Aplikasi Python</strong>, integrasi <strong>Edge AI (TinyML)</strong> pada mikrokontroler, dan perancangan casing mekanis <strong>3D CAD (Fusion 360)</strong>, saya mampu mewujudkan ide produk dari sketsa konsep hingga siap diproduksi secara utuh.
+            </p>
+        </section>
+
+        <!-- 02. Skills Section -->
+        <section class="skills-section" id="skills-sec">
+            <div class="section-meta-label">[ 02 // CAPABILITIES ]</div>
+            <h2 class="section-title">My Skills</h2>
+            <div class="title-line"></div>
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="devicon-python-plain colored skill-icon"></i>
+                    <span class="skill-name">Python App</span>
+                </div>
+                <div class="skill-card">
+                    <i class="devicon-cplusplus-plain colored skill-icon"></i>
+                    <span class="skill-name">C / C++</span>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/images/logo_espressif.png" alt="ESP-IDF" class="skill-icon">
+                    <span class="skill-name">ESP-IDF / ESP32</span>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/images/logo_platformio.png" alt="PlatformIO" class="skill-icon" style="width: 45px; height: 45px; margin-left: -6px; margin-right: -6px;">
+                    <span class="skill-name">PlatformIO</span>
+                </div>
+                <div class="skill-card">
+                    <i class="devicon-react-original colored skill-icon"></i>
+                    <span class="skill-name">React Web</span>
+                </div>
+                <div class="skill-card">
+                    <i class="devicon-flask-original colored skill-icon"></i>
+                    <span class="skill-name">Flask API</span>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/images/logo_fusion360.png" alt="Fusion 360" class="skill-icon">
+                    <span class="skill-name">Fusion 360 CAD</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-solid fa-brain skill-icon" style="color: #e28a07;"></i>
+                    <span class="skill-name">Edge AI / TinyML</span>
+                </div>
+                <div class="skill-card">
+                    <i class="devicon-git-plain colored skill-icon"></i>
+                    <span class="skill-name">Git Control</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-solid fa-print skill-icon" style="color: #9333ea;"></i>
+                    <span class="skill-name">3D Printing</span>
+                </div>
+                <div class="skill-card">
+                    <i class="devicon-mongodb-plain colored skill-icon"></i>
+                    <span class="skill-name">MongoDB</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03. Portfolio Section -->
+        <section class="portfolio-section" id="portfolio-sec">
+            <div class="section-meta-label">[ 03 // WORKS & REELS ]</div>
+            <h2 class="section-title">Selected Portfolio</h2>
+            <div class="title-line"></div>
+            
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All Works</button>
+                <button class="filter-btn" data-filter="iot">IoT & Systems</button>
+                <button class="filter-btn" data-filter="ai-robotics">Robotics & AI</button>
+                <button class="filter-btn" data-filter="network">Network & Cybersec</button>
+                <button class="filter-btn" data-filter="automation">Automation & 3D</button>
+                <button class="filter-btn" data-filter="professional">Professional</button>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Project 1: Bieon Ecosense (IoT) - LARGE -->
+                <div class="portfolio-card card-large" data-category="iot" onclick="openProjectModal('bieon')">
+                    <div class="portfolio-image-placeholder">
+                        <img src="assets/images/bieon_ecosense.jpg" alt="Bieon Ecosense" style="width: 100%; height: 100%; object-fit: cover; object-position: center; transition: var(--transition-smooth);">
+                    </div>
+                    <div class="portfolio-card-info">
+                        <div class="card-meta">IOT // ECOSYSTEM</div>
+                        <h3>Bieon Ecosense</h3>
+                        <p>Ekosistem smart home living terintegrasi hemat daya dan kompatibel dengan merek komersial besar.</p>
+                    </div>
+                </div>
+
+                <!-- Project 2: Siro (IoT) - SMALL -->
+                <div class="portfolio-card card-small" data-category="iot" onclick="openProjectModal('siro')">
+                    <div class="portfolio-image-placeholder">
+                        <img src="assets/images/siro.jpg" alt="Siro Project" style="width: 100%; height: 100%; object-fit: cover; transition: var(--transition-smooth);">
+                    </div>
+                    <div class="portfolio-card-info">
+                        <div class="card-meta">IOT // IRRIGATION</div>
+                        <h3>Siro - Irigasi Otomatis</h3>
+                        <p>Sistem irigasi otomatis cerdas berbasis IC Gal untuk efisiensi air pertanian.</p>
+                    </div>
+                </div>
+
+                <!-- Project 3: Lactos (IoT) - SMALL -->
+                <div class="portfolio-card card-small" data-category="iot" onclick="openProjectModal('lactos')">
+                    <div class="portfolio-image-placeholder">
+                        <img src="assets/images/lactos.jpg" alt="Lactos Project" style="width: 100%; height: 100%; object-fit: cover; transition: var(--transition-smooth);">
+                        <span class="reel-badge"><i class="fa-brands fa-instagram"></i> Reels Demo</span>
+                    </div>
+                    <div class="portfolio-card-info">
+                        <div class="card-meta">IOT // HOME UTILITY</div>
+                        <h3>Lactos Laci Otomatis</h3>
+                        <p>Laci otomatis dengan kontrol tombol fisik panel terintegrasi langsung pada laci.</p>
+                    </div>
+                </div>
+
+                <!-- Project 4: Sealen (Robotics/AI) - LARGE -->
+                <div class="portfolio-card card-large" data-category="ai-robotics" onclick="openProjectModal('sealen')">
+                    <div class="portfolio-image-placeholder">
+                        <img src="assets/images/sealen.png" alt="Sealen Ocean Cleaner Robot" style="width: 100%; height: 100%; object-fit: cover; object-position: center; transition: var(--transition-smooth);">
+                    </div>
+                    <div class="portfolio-card-info">
+                        <div class="card-meta">ROBOTICS // AI // ML</div>
+                        <h3>Sealen - Ocean Cleaner Robot</h3>
+                        <p>Robot pembersih lautan otonom berbasis Reinforcement Learning untuk navigasi, eksekusi, dan pemetaan rute efisien.</p>
+                    </div>
+                </div>
+
+                <!-- Project 5: Chop-X (IoT) - SMALL -->
+                <div class="portfolio-card card-small" data-category="iot" onclick="openProjectModal('chopx')">
+                    <div class="portfolio-image-placeholder">
+                        <img src="assets/images/chop-x.jpg" alt="Chop-X Project" style="width: 100%; height: 100%; object-fit: cover; transition: var(--transition-smooth);">
+                    </div>
+                    <div class="portfolio-card-info">
+                        <div class="card-meta">IOT // INDUSTRIAL CONTROL</div>
+                        <h3>Chop-X Cutter System</h3>
+                        <p>Pengontrol pemotong cerdas dengan kontrol variable speed dan dashboard biaya bisnis.</p>
+                    </div>
+                </div>
+
+                <!-- Project 6: Present Hub (AI/Robotics) - SMALL -->
+                <div class="portfolio-card card-small" data-category="ai-robotics" onclick="openProjectModal('presenthub')">
+                    <div class="portfolio-image-placeholder">
+                        <img src="assets/images/presenthub.jpg" alt="Present Hub" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; transition: var(--transition-smooth);">
+                    </div>
+                    <div class="portfolio-card-info">
+                        <div class="card-meta">AI // FACE RECOGNITION</div>
+                        <h3>Present Hub</h3>
+                        <p>Sistem absensi mahasiswa berbasis face recognition terintegrasi proteksi anti-spoofing.</p>
+                    </div>
+                </div>
+
+                <!-- Project 7: Your Path (AI/Robotics) - SMALL -->
+                <div class="portfolio-card card-small" data-category="ai-robotics" onclick="openProjectModal('yourpath')">
+                    <div class="portfolio-image-placeholder">
+                        <img src="assets/images/yourpath.png" alt="Your Path CV Analyzer" style="width: 100%; height: 100%; object-fit: cover; object-position: center; transition: var(--transition-smooth);">
+                    </div>
+                    <div class="portfolio-card-info">
+                        <div class="card-meta">AI // DATA SCIENCE // COLLAB</div>
+                        <h3>Your Path - CV Analyzer</h3>
+                        <p>Analisis CV berbasis klasifikasi menggunakan penggabungan model Random Forest dan LLM.</p>
+                    </div>
+                </div>
+
+                <!-- Project 8: Node Zero Project (Network/Cybersec) - LARGE -->
+                <div class="portfolio-card card-large" data-category="network" onclick="openProjectModal('nodezero')">
+                    <div class="portfolio-image-placeholder">
+                        <img src="assets/images/node_zero.png" alt="Node Zero Security" style="width: 100%; height: 100%; object-fit: cover; object-position: center; transition: var(--transition-smooth);">
+                    </div>
+                    <div class="portfolio-card-info">
+                        <div class="card-meta">CYBERSECURITY // PENETRATION</div>
+                        <h3>Node Zero Security</h3>
+                        <p>Penetration testing dan pemindaian celah keamanan website menggunakan port scanning Wireshark, Nmap, dan Metasploit.</p>
+                    </div>
+                </div>
+
+                <!-- Project 9: K1 Wireless (Network/Cybersec) - SMALL -->
+                <div class="portfolio-card card-small" data-category="network" onclick="openProjectModal('k1wireless')">
+                    <div class="portfolio-image-placeholder">
+                        <img src="assets/images/k1wireless.jpg" alt="K1 Wireless" style="width: 100%; height: 100%; object-fit: cover; object-position: center; transition: var(--transition-smooth);">
+                    </div>
+                    <div class="portfolio-card-info">
+                        <div class="card-meta">NETWORK // ROUTEROS</div>
+                        <h3>K1 Wireless</h3>
+                        <p>Jaringan terpusat IoT enterprise virtual dengan router fisik/virtual dan client Ubuntu di VM.</p>
+                    </div>
+                </div>
+
+                <!-- Project 10: LigateK Board (IoT) - SMALL -->
+                <div class="portfolio-card card-small" data-category="iot" onclick="openProjectModal('ligatek')">
+                    <div class="portfolio-image-placeholder">
+                        <i class="fa-solid fa-stopwatch" style="color: #ec4899;"></i>
+                    </div>
+                    <div class="portfolio-card-info">
+                        <div class="card-meta">EMBEDDED // SPORTS</div>
+                        <h3>LigateK Board</h3>
+                        <p>Papan skor kompetisi sport prodi menggunakan sirkuit elektronika digital dasar.</p>
+                    </div>
+                </div>
+
+                <!-- Project 11: Mall Area Parking Automation (Automation/3D) - SMALL -->
+                <div class="portfolio-card card-small" data-category="automation" onclick="openProjectModal('parking')">
+                    <div class="portfolio-image-placeholder">
+                        <img src="assets/images/parking.jpg" alt="Parking Automation" style="width: 100%; height: 100%; object-fit: cover; object-position: center; transition: var(--transition-smooth);">
+                    </div>
+                    <div class="portfolio-card-info">
+                        <div class="card-meta">AUTOMATION // SIMULATION</div>
+                        <h3>Parking Automation</h3>
+                        <p>Prototipe area parkir terintegrasi otomatis untuk mencegah overload dan meningkatkan keamanan.</p>
+                    </div>
+                </div>
+
+                <!-- Project 12: TekWan 04 Project (Network/Cybersec) - SMALL -->
+                <div class="portfolio-card card-small" data-category="network" onclick="openProjectModal('tekwan')">
+                    <div class="portfolio-image-placeholder">
+                        <img src="assets/images/tekwan.jpg" alt="TekWan 04 - VPLS" style="width: 100%; height: 100%; object-fit: cover; object-position: center; transition: var(--transition-smooth);">
+                    </div>
+                    <div class="portfolio-card-info">
+                        <div class="card-meta">NETWORK // L2VPN MPLS</div>
+                        <h3>TekWan 04 - VPLS</h3>
+                        <p>Implementasi jaringan virtual situs customer menggunakan teknologi L2VPN MPLS (VPLS) pada VM.</p>
+                    </div>
+                </div>
+
+                <!-- Project 13: AAJ Project (Network/Cybersec) - SMALL -->
+                <div class="portfolio-card card-small" data-category="network" onclick="openProjectModal('aaj')">
+                    <div class="portfolio-image-placeholder">
+                        <img src="assets/images/aaj.jpg" alt="AAJ Net Admin" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 15%; transition: var(--transition-smooth);">
+                    </div>
+                    <div class="portfolio-card-info">
+                        <div class="card-meta">ADMIN NET // SERVERS</div>
+                        <h3>AAJ Net Admin</h3>
+                        <p>Administrasi aplikasi jaringan membangun DNS, Web Server, dll di atas VM dan Ubuntu.</p>
+                    </div>
+                </div>
+
+                <!-- Project 14: Corn Processing Machine (Automation/3D) - LARGE -->
+                <div class="portfolio-card card-large" data-category="automation" onclick="openProjectModal('corn')">
+                    <div class="portfolio-image-placeholder">
+                        <img src="assets/images/corn_machine.png" alt="Corn Processing Machine" style="width: 100%; height: 100%; object-fit: cover; object-position: center; transition: var(--transition-smooth);">
+                    </div>
+                    <div class="portfolio-card-info">
+                        <div class="card-meta">AUTOMATION // PLC // 3D</div>
+                        <h3>Corn Processing Machine</h3>
+                        <p>Perancangan 3D modeling mekanis dan logika PLC (CX-One) mesin pengolah jagung skala besar dari kulit hingga kemasan.</p>
+                    </div>
+                </div>
+
+                <!-- Project 15: Audio Filter Analyzer (IoT) - SMALL -->
+                <div class="portfolio-card card-small" data-category="iot" onclick="openProjectModal('audio')">
+                    <div class="portfolio-image-placeholder">
+                        <img src="assets/images/audiofft.png" alt="Audio Filter FFT" style="width: 100%; height: 100%; object-fit: cover; object-position: center; transition: var(--transition-smooth);">
+                    </div>
+                    <div class="portfolio-card-info">
+                        <div class="card-meta">DSP // MATLAB // FFT</div>
+                        <h3>Audio Filter FFT</h3>
+                        <p>Analisis dan sistem filter audio digital memanfaatkan teknik transformasi Fourier cepat (FFT) di Matlab.</p>
+                    </div>
+                </div>
+
+                <!-- Project 16: Bluecheck Water Quality Sensor (IoT) - SMALL -->
+                <div class="portfolio-card card-small" data-category="iot" onclick="openProjectModal('bluecheck')">
+                    <div class="portfolio-image-placeholder">
+                        <img src="assets/images/bluecheck.jpg" alt="Bluecheck Water Quality" style="width: 100%; height: 100%; object-fit: cover; object-position: center; transition: var(--transition-smooth);">
+                    </div>
+                    <div class="portfolio-card-info">
+                        <div class="card-meta">IOT // SENSOR TECH</div>
+                        <h3>Bluecheck Water Quality</h3>
+                        <p>Sensor kualitas air digital dengan kalibrasi dan validasi presisi tinggi standar uji laboratorium.</p>
+                    </div>
+                </div>
+
+                <!-- Project 17: Moocare Mastitis Detector (Professional) - LARGE -->
+                <div class="portfolio-card card-large" data-category="professional" onclick="openProjectModal('moocare')">
+                    <div class="portfolio-image-placeholder">
+                        <img src="assets/images/moocare.jpg" alt="Moocare Mastitis Detector" style="width: 100%; height: 100%; object-fit: cover; object-position: center; transition: var(--transition-smooth);">
+                    </div>
+                    <div class="portfolio-card-info">
+                        <div class="card-meta">PROFESSIONAL // COLLAB // AI</div>
+                        <h3>Moocare Mastitis Detector</h3>
+                        <p>Alat skrining mastitis sapi perah portable dengan AI visual, sensor thermal, TDS, dan edge computing.</p>
+                    </div>
+                </div>
+
+                <!-- Project 18: AI Aquarium Cleaner (Professional) - SMALL -->
+                <div class="portfolio-card card-small" data-category="professional" onclick="openProjectModal('aquarium')">
+                    <div class="portfolio-image-placeholder">
+                        <img src="assets/images/aquarium_robot.png" alt="Aquarium Cleaner Robot" style="width: 100%; height: 100%; object-fit: cover; transition: var(--transition-smooth);">
+                    </div>
+                    <div class="portfolio-card-info">
+                        <div class="card-meta">PROFESSIONAL // 3D MODELING</div>
+                        <h3>Aquarium Cleaner Robot</h3>
+                        <p>Pemodelan 3D mekanis dan animasi pergerakan robot pembersih kaca dinding aquarium.</p>
+                    </div>
+                </div>
+
+                <!-- Project 19: Cow Shed Cleaner Robotic (Professional) - SMALL -->
+                <div class="portfolio-card card-small" data-category="professional" onclick="openProjectModal('cowshed')">
+                    <div class="portfolio-image-placeholder">
+                        <img src="assets/images/cowshed_robot.png" alt="Cow Shed Cleaner Robot" style="width: 100%; height: 100%; object-fit: cover; transition: var(--transition-smooth);">
+                    </div>
+                    <div class="portfolio-card-info">
+                        <div class="card-meta">PROFESSIONAL // 3D MODELING</div>
+                        <h3>Cow Shed Cleaner Robot</h3>
+                        <p>Desain 3D modeling robot pembersih lantai kandang sapi otomatis dengan penampung kotoran.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="view-more-container">
+                <a href="https://github.com" target="_blank" class="btn-view-more">Lihat Repositori Kode di GitHub</a>
+            </div>
+        </section>
+
+        <!-- 04. Certificates & Awards Section -->
+        <section class="credentials-section" id="credentials-sec">
+            <div class="section-meta-label">[ 04 // CREDENTIALS ]</div>
+            <h2 class="section-title">Certificates & Awards</h2>
+            <div class="title-line"></div>
+            
+            <div class="cert-grid">
+                <!-- Cert 1: CCNA Introduction to Networks -->
+                <a href="assets/certificates/CCNA_Introduction_to_Networks.pdf" target="_blank" class="cert-card" title="View CCNA Introduction to Networks">
+                    <div class="cert-card-header">
+                        <i class="fa-solid fa-network-wired cert-icon"></i>
+                        <span class="cert-year">2024</span>
+                    </div>
+                    <div class="cert-card-body">
+                        <h4 class="cert-title">CCNA Introduction to Networks</h4>
+                        <span class="cert-issuer">Cisco Networking Academy</span>
+                    </div>
+                </a>
+                <!-- Cert 2: Samsung Innovation Campus Batch 6 -->
+                <a href="assets/certificates/Samsung_Innovation_Campus_Batch_6.pdf" target="_blank" class="cert-card" title="View Samsung Innovation Campus Batch 6">
+                    <div class="cert-card-header">
+                        <i class="fa-solid fa-award cert-icon"></i>
+                        <span class="cert-year">2024</span>
+                    </div>
+                    <div class="cert-card-body">
+                        <h4 class="cert-title">Samsung Innovation Campus Batch 6</h4>
+                        <span class="cert-issuer">Samsung</span>
+                    </div>
+                </a>
+                <!-- Cert 3: Hacktiv8 FrontEnd React -->
+                <a href="assets/certificates/Hacktiv8_FrontEnd_React.pdf" target="_blank" class="cert-card" title="View Hacktiv8 FrontEnd React">
+                    <div class="cert-card-header">
+                        <i class="fa-brands fa-react cert-icon"></i>
+                        <span class="cert-year">2024</span>
+                    </div>
+                    <div class="cert-card-body">
+                        <h4 class="cert-title">Hacktiv8 FrontEnd React</h4>
+                        <span class="cert-issuer">HACKTIV8</span>
+                    </div>
+                </a>
+                <!-- Cert 4: BCA Financial Literacy -->
+                <a href="assets/certificates/BCA_Financial_Literacy.pdf" target="_blank" class="cert-card" title="View BCA Financial Literacy">
+                    <div class="cert-card-header">
+                        <i class="fa-solid fa-award cert-icon"></i>
+                        <span class="cert-year">2024</span>
+                    </div>
+                    <div class="cert-card-body">
+                        <h4 class="cert-title">BCA Financial Literacy</h4>
+                        <span class="cert-issuer">BCA</span>
+                    </div>
+                </a>
+                <!-- Cert 5: Dicoding Certificate Competetion [ AI Praktis Untuk Produktivitas] -->
+                <a href="assets/certificates/Dicoding%20Certificate%20Competetion%20%5B%20AI%20Praktis%20Untuk%20Produktivitas%5D.pdf" target="_blank" class="cert-card" title="View Dicoding Certificate Competetion [ AI Praktis Untuk Produktivitas]">
+                    <div class="cert-card-header">
+                        <i class="fa-solid fa-brain cert-icon"></i>
+                        <span class="cert-year">2024</span>
+                    </div>
+                    <div class="cert-card-body">
+                        <h4 class="cert-title">Dicoding Certificate Competetion [ AI Praktis Untuk Produktivitas]</h4>
+                        <span class="cert-issuer">Dicoding Indonesia</span>
+                    </div>
+                </a>
+                <!-- Cert 6: Dicoding Certificate Competetion [ Belajar Dasar AI] -->
+                <a href="assets/certificates/Dicoding%20Certificate%20Competetion%20%5B%20Belajar%20Dasar%20AI%5D.pdf" target="_blank" class="cert-card" title="View Dicoding Certificate Competetion [ Belajar Dasar AI]">
+                    <div class="cert-card-header">
+                        <i class="fa-solid fa-brain cert-icon"></i>
+                        <span class="cert-year">2024</span>
+                    </div>
+                    <div class="cert-card-body">
+                        <h4 class="cert-title">Dicoding Certificate Competetion [ Belajar Dasar AI]</h4>
+                        <span class="cert-issuer">Dicoding Indonesia</span>
+                    </div>
+                </a>
+                <!-- Cert 7: Dicoding Certificate Competetion [ Belajar Dasar Data Science] -->
+                <a href="assets/certificates/Dicoding%20Certificate%20Competetion%20%5B%20Belajar%20Dasar%20Data%20Science%5D.pdf" target="_blank" class="cert-card hidden-cert" title="View Dicoding Certificate Competetion [ Belajar Dasar Data Science]">
+                    <div class="cert-card-header">
+                        <i class="fa-solid fa-database cert-icon"></i>
+                        <span class="cert-year">2024</span>
+                    </div>
+                    <div class="cert-card-body">
+                        <h4 class="cert-title">Dicoding Certificate Competetion [ Belajar Dasar Data Science]</h4>
+                        <span class="cert-issuer">Dicoding Indonesia</span>
+                    </div>
+                </a>
+                <!-- Cert 8: Dicoding Certificate Competetion [ Belajar Dasar Visualisasi Data] -->
+                <a href="assets/certificates/Dicoding%20Certificate%20Competetion%20%5B%20Belajar%20Dasar%20Visualisasi%20Data%5D.pdf" target="_blank" class="cert-card hidden-cert" title="View Dicoding Certificate Competetion [ Belajar Dasar Visualisasi Data]">
+                    <div class="cert-card-header">
+                        <i class="fa-solid fa-database cert-icon"></i>
+                        <span class="cert-year">2024</span>
+                    </div>
+                    <div class="cert-card-body">
+                        <h4 class="cert-title">Dicoding Certificate Competetion [ Belajar Dasar Visualisasi Data]</h4>
+                        <span class="cert-issuer">Dicoding Indonesia</span>
+                    </div>
+                </a>
+                <!-- Cert 9: Dicoding Certificate Competetion [ Belajar Penggunaan Generative AI] -->
+                <a href="assets/certificates/Dicoding%20Certificate%20Competetion%20%5B%20Belajar%20Penggunaan%20Generative%20AI%5D.pdf" target="_blank" class="cert-card hidden-cert" title="View Dicoding Certificate Competetion [ Belajar Penggunaan Generative AI]">
+                    <div class="cert-card-header">
+                        <i class="fa-solid fa-brain cert-icon"></i>
+                        <span class="cert-year">2024</span>
+                    </div>
+                    <div class="cert-card-body">
+                        <h4 class="cert-title">Dicoding Certificate Competetion [ Belajar Penggunaan Generative AI]</h4>
+                        <span class="cert-issuer">Dicoding Indonesia</span>
+                    </div>
+                </a>
+                <!-- Cert 10: Dicoding Certificate Competetion [ Belajar Structured Query Language] -->
+                <a href="assets/certificates/Dicoding%20Certificate%20Competetion%20%5B%20Belajar%20Structured%20Query%20Language%5D.pdf" target="_blank" class="cert-card hidden-cert" title="View Dicoding Certificate Competetion [ Belajar Structured Query Language]">
+                    <div class="cert-card-header">
+                        <i class="fa-solid fa-database cert-icon"></i>
+                        <span class="cert-year">2024</span>
+                    </div>
+                    <div class="cert-card-body">
+                        <h4 class="cert-title">Dicoding Certificate Competetion [ Belajar Structured Query Language]</h4>
+                        <span class="cert-issuer">Dicoding Indonesia</span>
+                    </div>
+                </a>
+                <!-- Cert 11: Dicoding Certificate Competetion [ Memulai Pemograman Dengan Python] -->
+                <a href="assets/certificates/Dicoding%20Certificate%20Competetion%20%5B%20Memulai%20Pemograman%20Dengan%20Python%5D.pdf" target="_blank" class="cert-card hidden-cert" title="View Dicoding Certificate Competetion [ Memulai Pemograman Dengan Python]">
+                    <div class="cert-card-header">
+                        <i class="fa-solid fa-brain cert-icon"></i>
+                        <span class="cert-year">2024</span>
+                    </div>
+                    <div class="cert-card-body">
+                        <h4 class="cert-title">Dicoding Certificate Competetion [ Memulai Pemograman Dengan Python]</h4>
+                        <span class="cert-issuer">Dicoding Indonesia</span>
+                    </div>
+                </a>
+                <!-- Cert 12: Dicoding Certificate Competetion [Finacial Literacy 101] -->
+                <a href="assets/certificates/Dicoding%20Certificate%20Competetion%20%5BFinacial%20Literacy%20101%5D.pdf" target="_blank" class="cert-card hidden-cert" title="View Dicoding Certificate Competetion [Finacial Literacy 101]">
+                    <div class="cert-card-header">
+                        <i class="fa-solid fa-award cert-icon"></i>
+                        <span class="cert-year">2024</span>
+                    </div>
+                    <div class="cert-card-body">
+                        <h4 class="cert-title">Dicoding Certificate Competetion [Finacial Literacy 101]</h4>
+                        <span class="cert-issuer">Dicoding Indonesia</span>
+                    </div>
+                </a>
+                <!-- Cert 13: Hacktiv8 Technical Class -->
+                <a href="assets/certificates/Hacktiv8_Technical_Class.jpg" target="_blank" class="cert-card hidden-cert" title="View Hacktiv8 Technical Class">
+                    <div class="cert-card-header">
+                        <i class="fa-solid fa-award cert-icon"></i>
+                        <span class="cert-year">2024</span>
+                    </div>
+                    <div class="cert-card-body">
+                        <h4 class="cert-title">Hacktiv8 Technical Class</h4>
+                        <span class="cert-issuer">HACKTIV8</span>
+                    </div>
+                </a>
+            </div>
+                <div class="see-all-certs-container" style="text-align: center; width: 100%; margin-top: 2.5rem;">
+                    <button id="seeAllCertsBtn" class="btn-primary" style="padding: 0.8rem 2rem; font-size: 1rem; cursor: pointer; border-radius: 5px; border: none; background: #00ff88; color: #1a1a2e; font-weight: 700;">View All Certificates</button>
+                </div>
+        </section>
+
+        <!-- 05. Experience Section -->
+        <section class="experience-section" id="experience-sec">
+            <div class="section-meta-label">[ 05 // TIMELINE ]</div>
+            <h2 class="section-title">Experience</h2>
+            <div class="title-line"></div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-badge">2025 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Lead IoT Developer & Automation Systems</h3>
+                        <span class="timeline-company">Bieon Project Ecosystem</span>
+                        <p>
+                            Merancang penuh sirkuit PCB kustom, memprogram firmware berbasis C++ pada mikrokontroler ESP32, mengkonfigurasi transmisi data nirkabel menggunakan ESP-NOW dan MQTT, serta membangun interface dashboard web pemantau terpusat.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-badge">2024</div>
+                    <div class="timeline-content">
+                        <h3>Embedded Systems Specialist</h3>
+                        <span class="timeline-company">Automation Solution Lab</span>
+                        <p>
+                            Merancang prototipe casing 3D kustom (CAD) dengan struktur presisi snap-fit untuk melindungi sirkuit modul industri, melatih model AI/ML ringan di perangkat mikro (Edge AI), serta mengintegrasikan database database lokal.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-badge">2023</div>
+                    <div class="timeline-content">
+                        <h3>IoT & Web Developer Freelance</h3>
+                        <span class="timeline-company">Freelance Services</span>
+                        <p>
+                            Membantu merancang sistem kontrol mikrokontroler Arduino/ESP32, mengotomatisasi pengiriman data sensor ke cloud Firebase, serta membangun dashboard visualisasi data sensor berbasis React.js.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06. Services Section -->
+        <section class="services-section" id="skills-sec">
+            <div class="section-meta-label">[ 06 // SERVICES ]</div>
+            <h2 class="section-title">Services I Offer</h2>
+            <div class="title-line"></div>
+            
+            <div class="services-box">
+                <div class="services-box-item">
+                    <span class="service-box-bullet"></span>
+                    <div class="service-box-desc">
+                        <h4>Rancang Bangun IoT & Firmware</h4>
+                        <p>Desain PCB sirkuit, kustom kode firmware C/C++, konfigurasi mikrokontroler, serta protokol nirkabel sensor.</p>
+                    </div>
+                </div>
+                <div class="services-box-item">
+                    <span class="service-box-bullet"></span>
+                    <div class="service-box-desc">
+                        <h4>Dashboard Web & Panel Kontrol</h4>
+                        <p>Pembuatan interface pemantauan sensor real-time interaktif menggunakan React, Node.js, dan WebSocket.</p>
+                    </div>
+                </div>
+                <div class="services-box-item">
+                    <span class="service-box-bullet"></span>
+                    <div class="service-box-desc">
+                        <h4>Desain Casing 3D CAD & Prototyping</h4>
+                        <p>Pembuatan gambar mekanis 3D kustom siap cetak 3D untuk casing alat IoT agar aman dan presisi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 07. Contact Section -->
+        <section class="contact-section" id="contact-sec">
+            <div class="section-meta-label">[ 07 // CONTACT ]</div>
+            <h2 class="section-title">Contact Me</h2>
+            <div class="title-line"></div>
+            
+            <div class="contact-links-grid">
+                <a href="mailto:julman.waruwu@gmail.com" class="contact-card-btn">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>julman.waruwu@gmail.com</span>
+                </a>
+                
+                <a href="https://wa.me/6281234567890" target="_blank" class="contact-card-btn">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>+62 812-3456-7890</span>
+                </a>
+                
+                <div class="contact-card-btn no-link">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Batam, Indonesia</span>
+                </div>
+            </div>
+
+            <div class="right-socials-footer">
+                <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="mailto:julman.waruwu@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+
+            <div class="thanks-block">
+                <p class="thanks-text">"Thanks for Scrolling"</p>
+            </div>
+        </section>
+
+        </div>
+    </main>
+
+    <!-- PROJECT MODALS -->
+    <div class="modal-backdrop" id="project-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeProjectModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div id="modal-project-content">
+                <!-- Content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

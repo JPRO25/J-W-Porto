@@ -1,0 +1,17 @@
+{
+  "name": "julman-waruwu-portfolio",
+  "version": "1.0.0",
+  "description": "Julman Waruwu Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve . -p $PORT"
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "author": "Julman Waruwu",
+  "license": "ISC"
+}
