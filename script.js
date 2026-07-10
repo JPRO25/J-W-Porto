@@ -20,7 +20,8 @@ const projectData = {
     siro: {
         title: "Siro - Irigasi Otomatis",
         tag: "IOT // IRRIGATION",
-        videoFormat: "landscape",
+        videoFormat: "portrait",
+        reelId: "DCtsULoyzDw",
         body: `
             <p><strong>Siro</strong> adalah sebuah proyek inovatif sistem irigasi otomatis berbasis IC Gal yang dirancang khusus untuk meningkatkan efisiensi penggunaan air pada sektor pertanian.</p>
             
@@ -219,7 +220,8 @@ const projectData = {
     bluecheck: {
         title: "Bluecheck Water Quality Sensor",
         tag: "IOT // SENSOR TECH",
-        videoFormat: "landscape",
+        videoFormat: "portrait",
+        reelId: "DaSWXxUpJLh",
         body: `
             <p><strong>Bluecheck Water Quality Sensor</strong> adalah sensor kualitas air digital presisi tinggi yang berperan sebagai node sensor mandiri di dalam ekosistem Bieon Ecosense.</p>
             
@@ -300,9 +302,9 @@ function openProjectModal(projectId) {
     } else {
         // Static Placeholder for landscape projects without video link
         videoSection = `
-            <div class="modal-video-placeholder">
-                <i class="fa-solid fa-laptop-code" style="color: #c85a3c;"></i>
-                <span>Video Dokumentasi Desktop (16:9)</span>
+            <div class="modal-video-placeholder" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; background: rgba(255,255,255,0.02); border: 1px dashed rgba(255,255,255,0.1); border-radius: 12px; padding: 3rem; text-align: center;">
+                <i class="fa-solid fa-video-slash" style="font-size: 2rem; color: #c85a3c;"></i>
+                <span style="color: #888; font-size: 0.9rem; font-style: italic;">Status: Belum Update<br>(masih mengumpulkan asset video)</span>
             </div>
         `;
     }
