@@ -107,7 +107,9 @@
             <section id="about" class="content-section">
                 <h2 class="section-title">About Me</h2>
                 <div class="glass-card">
-                    <p>I am dedicated to designing and building smart automation systems (<strong>IoT</strong>) and <strong>Embedded Systems</strong>. Backed by skills in <strong>Web Applications (React/Node.js)</strong>, <strong>Python Development</strong>, <strong>Edge AI (TinyML)</strong> on microcontrollers, and <strong>3D CAD (Fusion 360)</strong>, I can bring product ideas to life from conceptual sketches to fully production-ready prototypes.</p>
+                    <p id="about-text-container" style="min-height: 120px;">
+                        <span id="typing-text" data-html="I am dedicated to designing and building smart automation systems (&lt;strong&gt;IoT&lt;/strong&gt;) and &lt;strong&gt;Embedded Systems&lt;/strong&gt;. Backed by skills in &lt;strong&gt;Web Applications (React/Node.js)&lt;/strong&gt;, &lt;strong&gt;Python Development&lt;/strong&gt;, &lt;strong&gt;Edge AI (TinyML)&lt;/strong&gt; on microcontrollers, and &lt;strong&gt;3D CAD (Fusion 360)&lt;/strong&gt;, I can bring product ideas to life from conceptual sketches to fully production-ready prototypes."></span><span class="blinking-cursor">|</span>
+                    </p>
                 </div>
             </section>
             
@@ -219,7 +221,7 @@
                 <h2 class="section-title">Featured Works</h2>
                 <div class="portfolio-grid">
 
-                    <div class="glass-card port-card" onclick="openProjectModal('bieon')" style="cursor: pointer;">
+                    <div class="glass-card port-card animate-on-scroll" data-animation="animate-pop-up" onclick="openProjectModal('bieon')" style="cursor: pointer;">
                         <div class="port-image" style="background-image: url('assets/images/bieon_ecosense.jpg');"></div>
                         <div class="port-content">
                             <span class="port-tag">IOT // ECOSYSTEM</span>
@@ -227,7 +229,7 @@
                             <p>Ekosistem smart home living terintegrasi hemat daya dan kompatibel dengan merek komersial besar.</p>
                         </div>
                     </div>
-                    <div class="glass-card port-card" onclick="openProjectModal('siro')" style="cursor: pointer;">
+                    <div class="glass-card port-card animate-on-scroll" data-animation="animate-pop-up" onclick="openProjectModal('siro')" style="cursor: pointer;">
                         <div class="port-image" style="background-image: url('assets/images/siro.jpg');"></div>
                         <div class="port-content">
                             <span class="port-tag">IOT // IRRIGATION</span>
@@ -235,7 +237,7 @@
                             <p>Sistem irigasi otomatis cerdas berbasis IC Gal untuk efisiensi air pertanian.</p>
                         </div>
                     </div>
-                    <div class="glass-card port-card" onclick="openProjectModal('lactos')" style="cursor: pointer;">
+                    <div class="glass-card port-card animate-on-scroll" data-animation="animate-pop-up" onclick="openProjectModal('lactos')" style="cursor: pointer;">
                         <div class="port-image" style="background-image: url('assets/images/lactos.jpg');">
                             <span class="reel-badge"><i class="fa-brands fa-instagram"></i> Reels Demo</span>
                         </div>
@@ -245,7 +247,7 @@
                             <p>Laci otomatis dengan kontrol tombol fisik panel terintegrasi langsung pada laci.</p>
                         </div>
                     </div>
-                    <div class="glass-card port-card" onclick="openProjectModal('sealen')" style="cursor: pointer;">
+                    <div class="glass-card port-card animate-on-scroll" data-animation="animate-pop-up" onclick="openProjectModal('sealen')" style="cursor: pointer;">
                         <div class="port-image" style="background-image: url('assets/images/sealen.png');"></div>
                         <div class="port-content">
                             <span class="port-tag">ROBOTICS // AI // ML</span>
@@ -253,7 +255,7 @@
                             <p>Robot pembersih lautan otonom berbasis Reinforcement Learning untuk navigasi, eksekusi, dan pemetaan rute efisien.</p>
                         </div>
                     </div>
-                    <div class="glass-card port-card" onclick="openProjectModal('chopx')" style="cursor: pointer;">
+                    <div class="glass-card port-card animate-on-scroll" data-animation="animate-pop-up" onclick="openProjectModal('chopx')" style="cursor: pointer;">
                         <div class="port-image" style="background-image: url('assets/images/chop-x.jpg');"></div>
                         <div class="port-content">
                             <span class="port-tag">IOT // INDUSTRIAL CONTROL</span>
@@ -261,7 +263,7 @@
                             <p>Pengontrol pemotong cerdas dengan kontrol variable speed dan dashboard biaya bisnis.</p>
                         </div>
                     </div>
-                    <div class="glass-card port-card" onclick="openProjectModal('presenthub')" style="cursor: pointer;">
+                    <div class="glass-card port-card animate-on-scroll" data-animation="animate-pop-up" onclick="openProjectModal('presenthub')" style="cursor: pointer;">
                         <div class="port-image" style="background-image: url('assets/images/presenthub.jpg');"></div>
                         <div class="port-content">
                             <span class="port-tag">AI // FACE RECOGNITION</span>
@@ -269,7 +271,7 @@
                             <p>Sistem absensi mahasiswa berbasis face recognition terintegrasi proteksi anti-spoofing.</p>
                         </div>
                     </div>
-                    <div class="glass-card port-card" onclick="openProjectModal('yourpath')" style="cursor: pointer;">
+                    <div class="glass-card port-card animate-on-scroll" data-animation="animate-pop-up" onclick="openProjectModal('yourpath')" style="cursor: pointer;">
                         <div class="port-image" style="background-image: url('assets/images/yourpath.png');"></div>
                         <div class="port-content">
                             <span class="port-tag">AI // DATA SCIENCE // COLLAB</span>
@@ -277,7 +279,7 @@
                             <p>Analisis CV berbasis klasifikasi menggunakan penggabungan model Random Forest dan LLM.</p>
                         </div>
                     </div>
-                    <div class="glass-card port-card" onclick="openProjectModal('nodezero')" style="cursor: pointer;">
+                    <div class="glass-card port-card animate-on-scroll" data-animation="animate-pop-up" onclick="openProjectModal('nodezero')" style="cursor: pointer;">
                         <div class="port-image" style="background-image: url('assets/images/node_zero.png');"></div>
                         <div class="port-content">
                             <span class="port-tag">CYBERSECURITY // PENETRATION</span>
@@ -285,7 +287,7 @@
                             <p>Penetration testing dan pemindaian celah keamanan website menggunakan port scanning Wireshark, Nmap, dan Metasploit.</p>
                         </div>
                     </div>
-                    <div class="glass-card port-card" onclick="openProjectModal('k1wireless')" style="cursor: pointer;">
+                    <div class="glass-card port-card animate-on-scroll" data-animation="animate-pop-up" onclick="openProjectModal('k1wireless')" style="cursor: pointer;">
                         <div class="port-image" style="background-image: url('assets/images/k1wireless.jpg');"></div>
                         <div class="port-content">
                             <span class="port-tag">NETWORK // ROUTEROS</span>
@@ -293,7 +295,7 @@
                             <p>Jaringan terpusat IoT enterprise virtual dengan router fisik/virtual dan client Ubuntu di VM.</p>
                         </div>
                     </div>
-                    <div class="glass-card port-card" onclick="openProjectModal('ligatek')" style="cursor: pointer;">
+                    <div class="glass-card port-card animate-on-scroll" data-animation="animate-pop-up" onclick="openProjectModal('ligatek')" style="cursor: pointer;">
                         <div class="port-image" style="background-image: url('');"></div>
                         <div class="port-content">
                             <span class="port-tag">EMBEDDED // SPORTS</span>
@@ -301,7 +303,7 @@
                             <p>Papan skor kompetisi sport prodi menggunakan sirkuit elektronika digital dasar.</p>
                         </div>
                     </div>
-                    <div class="glass-card port-card" onclick="openProjectModal('parking')" style="cursor: pointer;">
+                    <div class="glass-card port-card animate-on-scroll" data-animation="animate-pop-up" onclick="openProjectModal('parking')" style="cursor: pointer;">
                         <div class="port-image" style="background-image: url('assets/images/parking.jpg');"></div>
                         <div class="port-content">
                             <span class="port-tag">AUTOMATION // SIMULATION</span>
@@ -309,7 +311,7 @@
                             <p>Prototipe area parkir terintegrasi otomatis untuk mencegah overload dan meningkatkan keamanan.</p>
                         </div>
                     </div>
-                    <div class="glass-card port-card" onclick="openProjectModal('tekwan')" style="cursor: pointer;">
+                    <div class="glass-card port-card animate-on-scroll" data-animation="animate-pop-up" onclick="openProjectModal('tekwan')" style="cursor: pointer;">
                         <div class="port-image" style="background-image: url('assets/images/tekwan.jpg');"></div>
                         <div class="port-content">
                             <span class="port-tag">NETWORK // L2VPN MPLS</span>
@@ -317,7 +319,7 @@
                             <p>Implementasi jaringan virtual situs customer menggunakan teknologi L2VPN MPLS (VPLS) pada VM.</p>
                         </div>
                     </div>
-                    <div class="glass-card port-card" onclick="openProjectModal('aaj')" style="cursor: pointer;">
+                    <div class="glass-card port-card animate-on-scroll" data-animation="animate-pop-up" onclick="openProjectModal('aaj')" style="cursor: pointer;">
                         <div class="port-image" style="background-image: url('assets/images/aaj.jpg');"></div>
                         <div class="port-content">
                             <span class="port-tag">ADMIN NET // SERVERS</span>
@@ -325,7 +327,7 @@
                             <p>Administrasi aplikasi jaringan membangun DNS, Web Server, dll di atas VM dan Ubuntu.</p>
                         </div>
                     </div>
-                    <div class="glass-card port-card" onclick="openProjectModal('corn')" style="cursor: pointer;">
+                    <div class="glass-card port-card animate-on-scroll" data-animation="animate-pop-up" onclick="openProjectModal('corn')" style="cursor: pointer;">
                         <div class="port-image" style="background-image: url('assets/images/corn_machine.png');"></div>
                         <div class="port-content">
                             <span class="port-tag">AUTOMATION // PLC // 3D</span>
@@ -333,7 +335,7 @@
                             <p>Perancangan 3D modeling mekanis dan logika PLC (CX-One) mesin pengolah jagung skala besar dari kulit hingga kemasan.</p>
                         </div>
                     </div>
-                    <div class="glass-card port-card" onclick="openProjectModal('audio')" style="cursor: pointer;">
+                    <div class="glass-card port-card animate-on-scroll" data-animation="animate-pop-up" onclick="openProjectModal('audio')" style="cursor: pointer;">
                         <div class="port-image" style="background-image: url('assets/images/audiofft.png');"></div>
                         <div class="port-content">
                             <span class="port-tag">DSP // MATLAB // FFT</span>
@@ -341,7 +343,7 @@
                             <p>Analisis dan sistem filter audio digital memanfaatkan teknik transformasi Fourier cepat (FFT) di Matlab.</p>
                         </div>
                     </div>
-                    <div class="glass-card port-card" onclick="openProjectModal('bluecheck')" style="cursor: pointer;">
+                    <div class="glass-card port-card animate-on-scroll" data-animation="animate-pop-up" onclick="openProjectModal('bluecheck')" style="cursor: pointer;">
                         <div class="port-image" style="background-image: url('assets/images/bluecheck.jpg');"></div>
                         <div class="port-content">
                             <span class="port-tag">IOT // SENSOR TECH</span>
@@ -349,7 +351,7 @@
                             <p>Sensor kualitas air digital dengan kalibrasi dan validasi presisi tinggi standar uji laboratorium.</p>
                         </div>
                     </div>
-                    <div class="glass-card port-card" onclick="openProjectModal('moocare')" style="cursor: pointer;">
+                    <div class="glass-card port-card animate-on-scroll" data-animation="animate-pop-up" onclick="openProjectModal('moocare')" style="cursor: pointer;">
                         <div class="port-image" style="background-image: url('assets/images/moocare.jpg');"></div>
                         <div class="port-content">
                             <span class="port-tag">PROFESSIONAL // COLLAB // AI</span>
@@ -357,7 +359,7 @@
                             <p>Alat skrining mastitis sapi perah portable dengan AI visual, sensor thermal, TDS, dan edge computing.</p>
                         </div>
                     </div>
-                    <div class="glass-card port-card" onclick="openProjectModal('aquarium')" style="cursor: pointer;">
+                    <div class="glass-card port-card animate-on-scroll" data-animation="animate-pop-up" onclick="openProjectModal('aquarium')" style="cursor: pointer;">
                         <div class="port-image" style="background-image: url('assets/images/aquarium_robot.png');"></div>
                         <div class="port-content">
                             <span class="port-tag">PROFESSIONAL // 3D MODELING</span>
@@ -365,7 +367,7 @@
                             <p>Pemodelan 3D mekanis dan animasi pergerakan robot pembersih kaca dinding aquarium.</p>
                         </div>
                     </div>
-                    <div class="glass-card port-card" onclick="openProjectModal('cowshed')" style="cursor: pointer;">
+                    <div class="glass-card port-card animate-on-scroll" data-animation="animate-pop-up" onclick="openProjectModal('cowshed')" style="cursor: pointer;">
                         <div class="port-image" style="background-image: url('assets/images/cowshed_robot.png');"></div>
                         <div class="port-content">
                             <span class="port-tag">PROFESSIONAL // 3D MODELING</span>

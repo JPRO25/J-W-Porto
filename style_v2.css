@@ -881,3 +881,45 @@ body {
     opacity: 1;
     transform: scale(1);
 }
+
+/* ==========================================================================
+   ANIMATIONS & EFFECTS
+   ========================================================================== */
+.animate-on-scroll {
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Default state for Canva-style pop-up */
+.port-card.animate-on-scroll {
+    transform: scale(0.9) translateY(40px);
+}
+
+.animate-pop-up {
+    opacity: 1 !important;
+    transform: scale(1) translateY(0) !important;
+}
+
+/* Default state for fade-up */
+.exp-card.animate-on-scroll,
+.skill-card-v2.animate-on-scroll,
+.cert-card.animate-on-scroll {
+    transform: translateY(40px);
+}
+
+.animate-fade-up {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Blinking Cursor */
+.blinking-cursor {
+    font-weight: bold;
+    color: var(--accent-cyan);
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}

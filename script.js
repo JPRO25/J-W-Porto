@@ -463,10 +463,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
+            const animationClass = entry.target.getAttribute('data-animation') || 'animate-pop-up';
             if (entry.isIntersecting) {
-                const animationClass = entry.target.getAttribute('data-animation') || 'animate-fade-up';
                 entry.target.classList.add(animationClass);
-                observer.unobserve(entry.target);
+            } else {
+                entry.target.classList.remove(animationClass);
             }
         });
     }, {
@@ -493,3 +494,65 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+// ==========================================================================
+// TYPING ANIMATION (ABOUT SECTION)
+// ==========================================================================
+document.addEventListener('DOMContentLoaded', () => {
+    const typingSpan = document.getElementById('typing-text');
+    if (!typingSpan) return;
+
+    // Decode HTML entities
+    const rawHtml = typingSpan.getAttribute('data-html') || '';
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = rawHtml;
+    const fullHtml = tempDiv.innerHTML;
+
+    let i = 0;
+    let isTyping = false;
+    let typeInterval;
+
+    const typeWriter = () => {
+        if (i < fullHtml.length) {
+            // Handle HTML tags: if we hit a '<', find the closing '>'
+            if (fullHtml.charAt(i) === '<') {
+                const closeTag = fullHtml.indexOf('>', i);
+                if (closeTag !== -1) {
+                    typingSpan.innerHTML += fullHtml.substring(i, closeTag + 1);
+                    i = closeTag + 1;
+                }
+            } else {
+                typingSpan.innerHTML += fullHtml.charAt(i);
+                i++;
+            }
+            typeInterval = setTimeout(typeWriter, 20); // typing speed
+        }
+    };
+
+    // Use Intersection Observer to trigger typing when scrolled into view
+    const aboutObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                if (!isTyping) {
+                    isTyping = true;
+                    typingSpan.innerHTML = '';
+                    i = 0;
+                    typeWriter();
+                }
+            } else {
+                // Reset when scrolled out of view to re-trigger consistently
+                clearTimeout(typeInterval);
+                typingSpan.innerHTML = '';
+                i = 0;
+                isTyping = false;
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+        aboutObserver.observe(aboutSection);
+    }
+});
