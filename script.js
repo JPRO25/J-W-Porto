@@ -558,3 +558,38 @@ document.addEventListener('DOMContentLoaded', () => {
         aboutObserver.observe(aboutSection);
     }
 });
+
+// ==========================================================================
+// THEME TOGGLE LOGIC
+// ==========================================================================
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    
+    // Check local storage for saved theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+        document.body.setAttribute('data-theme', 'light');
+        if(themeIcon) {
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+        }
+    }
+    
+    if(themeToggle && themeIcon) {
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.body.getAttribute('data-theme');
+            if (currentTheme === 'light') {
+                document.body.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'dark');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            } else {
+                document.body.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            }
+        });
+    }
+});
