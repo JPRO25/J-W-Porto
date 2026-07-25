@@ -563,33 +563,26 @@ document.addEventListener('DOMContentLoaded', () => {
 // THEME TOGGLE LOGIC
 // ==========================================================================
 document.addEventListener('DOMContentLoaded', () => {
-    const themeToggle = document.getElementById('theme-toggle');
-    const themeIcon = document.getElementById('theme-icon');
+    const themeCheckbox = document.getElementById('theme-checkbox');
+    if (!themeCheckbox) return;
+
+    // We use document.documentElement (<html>) for :root CSS variables
+    const rootEl = document.documentElement;
     
     // Check local storage for saved theme
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'light') {
-        document.body.setAttribute('data-theme', 'light');
-        if(themeIcon) {
-            themeIcon.classList.remove('fa-sun');
-            themeIcon.classList.add('fa-moon');
-        }
+        rootEl.setAttribute('data-theme', 'light');
+        themeCheckbox.checked = true;
     }
     
-    if(themeToggle && themeIcon) {
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = document.body.getAttribute('data-theme');
-            if (currentTheme === 'light') {
-                document.body.removeAttribute('data-theme');
-                localStorage.setItem('theme', 'dark');
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
-            } else {
-                document.body.setAttribute('data-theme', 'light');
-                localStorage.setItem('theme', 'light');
-                themeIcon.classList.remove('fa-sun');
-                themeIcon.classList.add('fa-moon');
-            }
-        });
-    }
+    themeCheckbox.addEventListener('change', (e) => {
+        if (e.target.checked) {
+            rootEl.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+        } else {
+            rootEl.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'dark');
+        }
+    });
 });
