@@ -958,7 +958,7 @@ body {
 }
 
 /* ==========================================================================
-   THEME SWITCH STYLES
+   THEME SWITCH STYLES (DAY/NIGHT)
    ========================================================================== */
 .theme-switch-wrapper {
     display: flex;
@@ -976,7 +976,7 @@ body {
     height: 0;
     position: absolute;
 }
-.slider {
+.slider-sky {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -984,42 +984,99 @@ body {
     right: 0;
     bottom: 0;
     border-radius: 34px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: .4s;
+    background: linear-gradient(180deg, #0b1120 0%, #1e293b 100%);
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.5), 0 4px 15px rgba(0,0,0,0.2);
+    transition: background 0.4s ease;
+    overflow: hidden;
 }
-.slider:before {
+input:checked + .slider-sky {
+    background: linear-gradient(180deg, #38bdf8 0%, #0ea5e9 100%);
+}
+.sun-moon {
     position: absolute;
-    content: "";
-    height: 24px;
-    width: 24px;
+    height: 26px;
+    width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: var(--accent-cyan);
     border-radius: 50%;
-    transition: .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: 3;
+    background-color: #cbd5e1;
+    box-shadow: inset -3px 0px 0px rgba(0,0,0,0.15);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.4s ease, box-shadow 0.4s ease;
+    z-index: 10;
+    overflow: hidden;
 }
-input:checked + .slider:before {
+input:checked + .slider-sky .sun-moon {
     transform: translateX(32px);
-    background-color: var(--accent-magenta);
+    background-color: #fbbf24;
+    box-shadow: 0 0 10px #fbbf24, inset -2px -2px 0px rgba(255,255,255,0.3);
 }
-.sun-icon, .moon-icon {
-    font-size: 14px;
+.crater {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
+    background-color: rgba(0,0,0,0.15);
+    border-radius: 50%;
+    transition: opacity 0.3s ease;
 }
-.sun-icon { 
-    left: 9px;
-    color: #f39c12; 
+.crater-1 { width: 6px; height: 6px; top: 6px; left: 14px; }
+.crater-2 { width: 4px; height: 4px; top: 15px; left: 8px; }
+.crater-3 { width: 5px; height: 5px; top: 13px; left: 16px; }
+input:checked + .slider-sky .crater {
+    opacity: 0;
 }
-.moon-icon { 
-    right: 9px;
-    color: #f1c40f; 
+.stars {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.star {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 2px #fff;
+}
+.star-1 { width: 2px; height: 2px; top: 8px; left: 35px; animation: twinkle 2s infinite alternate; }
+.star-2 { width: 1px; height: 1px; top: 20px; left: 45px; animation: twinkle 3s infinite alternate; }
+.star-3 { width: 2px; height: 2px; top: 12px; left: 55px; animation: twinkle 2.5s infinite alternate; }
+.star-4 { width: 1.5px; height: 1.5px; top: 24px; left: 38px; }
+input:checked + .slider-sky .stars {
+    transform: translateY(-20px);
+    opacity: 0;
+}
+@keyframes twinkle {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+.cloud {
+    position: absolute;
+    background: #fff;
+    border-radius: 50px;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    z-index: 5;
+}
+.cloud-1 {
+    width: 20px; height: 7px;
+    bottom: 5px; left: 8px;
+}
+.cloud-1::before {
+    content: ''; position: absolute; background: #fff; width: 11px; height: 11px; border-radius: 50%; top: -6px; left: 2px;
+}
+.cloud-1::after {
+    content: ''; position: absolute; background: #fff; width: 8px; height: 8px; border-radius: 50%; top: -3px; right: 2px;
+}
+.cloud-2 {
+    width: 14px; height: 5px;
+    top: 10px; left: 25px;
+}
+.cloud-2::before {
+    content: ''; position: absolute; background: #fff; width: 7px; height: 7px; border-radius: 50%; top: -4px; left: 2px;
+}
+input:checked + .slider-sky .cloud {
+    opacity: 1;
+    transform: translateY(0);
+}
+input:checked + .slider-sky .cloud-2 {
+    opacity: 0.8;
 }
 
 /* ==========================================================================
