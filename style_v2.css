@@ -208,7 +208,7 @@ body {
 .hero-profile-cutout {
     position: absolute;
     bottom: 0;
-    left: -4vw; 
+    left: 4vw; /* Geser ke kanan dari -4vw menjadi 4vw */
     width: clamp(240px, 26vw, 380px); 
     height: auto;
     max-height: 85vh;
