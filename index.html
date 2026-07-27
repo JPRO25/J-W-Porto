@@ -16,20 +16,20 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https:•jpro25.github.io/"> <!-- Placeholder URL -->
+    <meta property="og:url" content="https://jpro25.github.io/"> <!-- Placeholder URL -->
     <meta property="og:title" content="Julman Waruwu | Smart Systems Engineer">
     <meta property="og:description" content="Dedicated to designing and building smart automation systems (IoT), Embedded Systems, Web Applications, and Edge AI.">
     <meta property="og:image" content="assets/images/porto_pp.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https:•jpro25.github.io/">
+    <meta property="twitter:url" content="https://jpro25.github.io/">
     <meta property="twitter:title" content="Julman Waruwu | Smart Systems Engineer">
     <meta property="twitter:description" content="Dedicated to designing and building smart automation systems (IoT), Embedded Systems, Web Applications, and Edge AI.">
     <meta property="twitter:image" content="assets/images/porto_pp.png">
-    <link href="https:•fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https:•cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https:•cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="style_v2.css?v=8">
 </head>
 <body>
@@ -518,10 +518,10 @@
                     <p style="margin-bottom: 2rem; color: var(--text-secondary);">Interested in collaborating or have a project in mind? Let's talk.</p>
                     <a href="mailto:jul2005war@gmail.com" class="btn-primary">Email Me</a>
                     <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 1.5rem; font-size: 1.5rem;">
-                        <a href="https:•github.com/JPRO25" target="_blank" class="contact-icon"><i class="fa-brands fa-github"></i></a>
-                        <a href="https:•www.linkedin.com/in/julwar005" target="_blank" class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https:•www.instagram.com/jul.nww/" target="_blank" class="contact-icon"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https:•wa.me/6285358862982" target="_blank" class="contact-icon"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://github.com/JPRO25" target="_blank" class="contact-icon"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/julwar005" target="_blank" class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/jul.nww/" target="_blank" class="contact-icon"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.me/6285358862982" target="_blank" class="contact-icon"><i class="fa-brands fa-whatsapp"></i></a>
                     </div>
                 </div>
             </section>
@@ -534,7 +534,7 @@
     </main>
 
     <script>
-        • Scroll-to-expand transition (Optimized with requestAnimationFrame)
+        // Scroll-to-expand transition (Optimized with requestAnimationFrame)
         let isScrolling = false;
         window.addEventListener('scroll', () => {
             if (!isScrolling) {
@@ -555,7 +555,7 @@
             }
         });
 
-        • Repeatable Scroll Animations
+        // Repeatable Scroll Animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: "0px 0px -50px 0px"
@@ -571,16 +571,16 @@
                     if (target.classList.contains('port-card')) target.classList.add('animate-canva-pop');
                     if (target.classList.contains('contact-icon')) target.classList.add('animate-pop');
                     
-                    • Trigger Typewriter for About Section
+                    // Trigger Typewriter for About Section
                     if (target.id === 'about-text' && !target.dataset.typing) {
                         startTypewriter(target);
                     }
                 } else {
-                    • Remove classes when out of view so animation repeats when scrolling back
+                    // Remove classes when out of view so animation repeats when scrolling back
                     target.classList.remove('animate-slide', 'animate-flip', 'animate-canva-pop', 'animate-pop');
                     
                     if (target.id === 'about-text') {
-                        • Reset typewriter
+                        // Reset typewriter
                         target.dataset.typing = "";
                         target.innerHTML = "";
                     }
@@ -588,24 +588,24 @@
             });
         }, observerOptions);
 
-        • Observe elements
+        // Observe elements
         document.querySelectorAll('.exp-card, .cert-card, .port-card, .contact-icon').forEach((el, index) => {
-            el.style.transitionDelay = `${(index % 4) * 0.1}s`; • slight stagger
+            el.style.transitionDelay = `${(index % 4) * 0.1}s`; // slight stagger
             scrollObserver.observe(el);
         });
 
-        • Typewriter Logic
+        // Typewriter Logic
         const aboutTextEl = document.querySelector('#about p');
         if (aboutTextEl) {
             aboutTextEl.id = 'about-text';
             aboutTextEl.classList.add('typing-cursor');
-            const fullText = aboutTextEl.innerHTML; • store original HTML including tags
-            aboutTextEl.dataset.fullText = aboutTextEl.innerText; • for pure text length
+            const fullText = aboutTextEl.innerHTML; // store original HTML including tags
+            aboutTextEl.dataset.fullText = aboutTextEl.innerText; // for pure text length
             aboutTextEl.innerHTML = "";
             scrollObserver.observe(aboutTextEl);
         }
 
-        • We use a simple JS typewriter for text nodes mimicking AntiGravity token streaming
+        // We use a simple JS typewriter for text nodes mimicking AntiGravity token streaming
         function startTypewriter(element) {
             element.dataset.typing = "true";
             const text = "I am dedicated to designing and building smart automation systems (IoT) and Embedded Systems. Backed by skills in Web Applications (React/Node.js), Python Development, Edge AI (TinyML) on microcontrollers, and 3D CAD (Fusion 360), I can bring product ideas to life from conceptual sketches to fully production-ready prototypes.";
@@ -613,18 +613,18 @@
             let i = 0;
             
             function typeChar() {
-                if (!element.dataset.typing) return; • stopped
+                if (!element.dataset.typing) return; // stopped
                 if (i < text.length) {
-                    • Random chunk size (1 to 4 chars) to mimic token streaming
+                    // Random chunk size (1 to 4 chars) to mimic token streaming
                     const chunkSize = Math.floor(Math.random() * 4) + 1;
                     element.innerHTML += text.substring(i, i + chunkSize);
                     i += chunkSize;
                     
-                    • Variable delay for realistic terminal/AI generation feel
+                    // Variable delay for realistic terminal/AI generation feel
                     const delay = Math.floor(Math.random() * 30) + 15;
                     setTimeout(typeChar, delay);
                 } else {
-                    • When finished, replace with original HTML to restore bold tags
+                    // When finished, replace with original HTML to restore bold tags
                     element.innerHTML = `I am dedicated to designing and building smart automation systems (<strong>IoT</strong>) and <strong>Embedded Systems</strong>. Backed by skills in <strong>Web Applications (React/Node.js)</strong>, <strong>Python Development</strong>, <strong>Edge AI (TinyML)</strong> on microcontrollers, and <strong>3D CAD (Fusion 360)</strong>, I can bring product ideas to life from conceptual sketches to fully production-ready prototypes.`;
                 }
             }
