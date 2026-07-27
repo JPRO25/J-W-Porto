@@ -201,15 +201,15 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 2rem 3rem 2rem clamp(250px, 24vw, 340px); /* Membawa teks lebih dekat ke foto */
+    padding: 2rem 3rem 2rem clamp(270px, 26vw, 380px);
     z-index: 20;
 }
 
 .hero-profile-cutout {
     position: absolute;
     bottom: 0;
-    left: -1vw; /* Posisi lebih natural untuk foto lengan bersedekap */
-    width: clamp(200px, 22vw, 320px); /* Sedikit diperkecil agar sikunya tidak menabrak teks */
+    left: 4vw;
+    width: clamp(240px, 26vw, 380px);
     height: auto;
     max-height: 85vh;
     object-fit: contain;
