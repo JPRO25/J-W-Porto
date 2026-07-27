@@ -586,3 +586,49 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+
+// ==========================================================================
+// CERTIFICATE MODAL LOGIC
+// ==========================================================================
+function openCertModal(event, fileUrl) {
+    if(event) event.preventDefault(); // Prevent default link opening
+    const modal = document.getElementById('cert-modal');
+    const body = document.getElementById('cert-modal-body');
+    if (!modal || !body) return;
+    
+    const isImage = fileUrl.toLowerCase().endsWith('.jpg') || fileUrl.toLowerCase().endsWith('.jpeg') || fileUrl.toLowerCase().endsWith('.png');
+    
+    if (isImage) {
+        body.innerHTML = `<img src="${fileUrl}" style="width: 100%; max-height: 85vh; object-fit: contain; border-radius: 8px;">`;
+    } else {
+        // Embed PDF. Using a wrapper that allows 100% height
+        body.innerHTML = `<iframe src="${fileUrl}" style="width: 100%; height: 85vh; border: none; border-radius: 8px;"></iframe>`;
+    }
+    
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeCertModal() {
+    const modal = document.getElementById('cert-modal');
+    if (!modal) return;
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+    // Clear the body after transition to stop any playing media/PDF
+    setTimeout(() => {
+        document.getElementById('cert-modal-body').innerHTML = '';
+    }, 300);
+}
+
+// Close cert modal when clicking on backdrop
+document.addEventListener('DOMContentLoaded', () => {
+    const certModalBackdrop = document.getElementById('cert-modal');
+    if (certModalBackdrop) {
+        certModalBackdrop.addEventListener('click', function(e) {
+            if (e.target === certModalBackdrop) {
+                closeCertModal();
+            }
+        });
+    }
+});
