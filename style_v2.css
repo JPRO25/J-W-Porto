@@ -217,11 +217,13 @@ body {
     z-index: 5;
     border-radius: 0; 
     
-    /* Tech Cyber Aesthetic for solid background photos */
+    /* Tech Cyber Aesthetic for transparent PNGs */
     border: 2px solid rgba(0, 204, 255, 0.3);
     outline: 1px solid rgba(0, 204, 255, 0.8);
     outline-offset: 6px;
-    background-color: #000;
+    background: linear-gradient(135deg, rgba(0, 204, 255, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), outline-offset 0.4s ease, outline-color 0.4s ease, box-shadow 0.4s ease;
@@ -1135,7 +1137,7 @@ input:checked + .slider-simple .light-icon {
 :root[data-theme="light"] .hero-profile-cutout {
     border-color: rgba(0, 136, 204, 0.4);
     outline-color: rgba(0, 136, 204, 0.8);
-    background-color: #f8fafc;
+    background: linear-gradient(135deg, rgba(0, 204, 255, 0.05) 0%, rgba(255, 255, 255, 0.5) 100%);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 :root[data-theme="light"] .hero-profile-cutout:hover {
