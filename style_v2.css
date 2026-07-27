@@ -201,14 +201,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 2rem 3rem 2rem clamp(270px, 26vw, 380px); /* Added more left padding to push text away from photo */
+    padding: 2rem 3rem 2rem clamp(320px, 30vw, 420px); /* Increased left padding to clear the wider new photo */
     z-index: 20;
 }
 
 .hero-profile-cutout {
     position: absolute;
     bottom: 0;
-    left: 4vw; /* Geser ke kanan dari -4vw menjadi 4vw */
+    left: -4vw; /* Kembalikan ke kiri agar bersandar di pinggir layar */
     width: clamp(240px, 26vw, 380px); 
     height: auto;
     max-height: 85vh;
