@@ -34,6 +34,26 @@
 </head>
 <body>
 
+    <!-- LIVING BACKGROUND -->
+    <div class="living-bg" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none; overflow: hidden;">
+        <!-- Left Side -->
+        <div class="shape shape-blob-1" style="top: 10%; left: 15vw;"></div>
+        <div class="shape shape-blob-2" style="top: 60%; left: 5vw;"></div>
+        <div class="shape shape-blob-3" style="top: 80%; left: 25vw;"></div>
+        <div class="shape shape-blob-4" style="top: 30%; left: 35vw;"></div>
+        
+        <!-- Right Side -->
+        <div class="shape shape-blob-2" style="top: 20%; right: 15vw;"></div>
+        <div class="shape shape-blob-3" style="top: 50%; right: 5vw;"></div>
+        <div class="shape shape-blob-1" style="top: 85%; right: 30vw;"></div>
+        <div class="shape shape-blob-4" style="top: 70%; right: 40vw;"></div>
+        
+        <!-- Center/Middle -->
+        <div class="shape shape-blob-3" style="top: 40%; left: 50vw;"></div>
+        <div class="shape shape-blob-1" style="top: 90%; left: 45vw;"></div>
+    </div>
+
+
     <!-- Theme Toggle Switch -->
     <div class="theme-switch-wrapper" style="position: fixed; top: 2rem; right: 2rem; z-index: 1000;">
         <label class="theme-switch" for="theme-checkbox">
@@ -78,11 +98,7 @@
                     <path class="wave-path" d="M120,50 Q180,20 220,60 T300,100 T330,180 T290,260 T320,340 T270,410 T180,430 T120,490 T50,450 T-20,400 T-40,250 T20,100 Z" fill="none" stroke="url(#waveGradient)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 
-                <!-- Floating geometric elements (Moved right to avoid photo overlap) -->
-                <div class="shape pill-magenta" style="top: 15%; left: 30vw;"></div>
-                <div class="shape circle-blue" style="top: 25%; left: 22vw;"></div>
-                <div class="shape star-orange" style="bottom: 20%; left: 25vw;"></div>
-                <div class="shape square-cyan" style="bottom: 35%; left: 35vw;"></div>
+                
             </div>
 
             <!-- Hero Text on the Right side of the Left Pane -->
@@ -102,13 +118,7 @@
         <!-- RIGHT: SCROLLABLE CONTENT -->
         <div class="split-right">
             
-            <!-- BACKGROUND GRAPHICS FOR RIGHT PANE -->
-            <div class="right-graphics">
-                <div class="shape pill-magenta" style="top: 10%; right: 10vw; transform: scaleX(-1);"></div>
-                <div class="shape circle-blue" style="top: 40%; right: 25vw;"></div>
-                <div class="shape star-orange" style="bottom: 30%; right: 15vw;"></div>
-                <div class="shape square-cyan" style="bottom: 10%; right: 30vw;"></div>
-            </div>
+            
 
             <!-- 2. About Section -->
             <section id="about" class="content-section">
