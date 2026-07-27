@@ -1265,3 +1265,47 @@ input:checked + .slider-simple .slider-thumb .light-icon {
     align-items: center;
     justify-content: center;
 }
+
+/* ==========================================================================
+   SKILLS ICON ONLY DESIGN
+   ========================================================================== */
+.skill-icon-only {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+}
+.skill-icon-only img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+.skill-icon-only i {
+    font-size: 2.2rem;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+.skill-icon-only:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 204, 255, 0.1);
+    border-color: rgba(0, 204, 255, 0.3);
+}
+
+:root[data-theme="light"] .skill-icon-only {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+:root[data-theme="light"] .skill-icon-only:hover {
+    background: #f8fafc;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 136, 204, 0.1);
+    border-color: rgba(0, 136, 204, 0.3);
+}
