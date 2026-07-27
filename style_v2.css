@@ -207,33 +207,23 @@ body {
 
 .hero-profile-cutout {
     position: absolute;
-    top: 50%;
-    left: 12vw; 
-    transform: translate(-50%, -50%);
-    width: clamp(160px, 16vw, 240px);
-    aspect-ratio: 4 / 5; /* Slightly elongated as requested */
-    object-fit: cover;
-    object-position: center 15%;
+    bottom: 0;
+    left: -4vw; 
+    width: clamp(240px, 26vw, 380px); 
+    height: auto;
+    max-height: 85vh;
+    object-fit: contain;
+    object-position: bottom left; 
     z-index: 5;
-    border-radius: 0; 
+    pointer-events: none;
     
-    /* Tech Cyber Aesthetic for transparent PNGs */
-    border: 2px solid rgba(0, 204, 255, 0.3);
-    outline: 1px solid rgba(0, 204, 255, 0.8);
-    outline-offset: 6px;
-    background: linear-gradient(135deg, rgba(0, 204, 255, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    /* Cinematic Grayscale styling to blend perfectly with dark theme */
+    filter: grayscale(100%) contrast(1.15) brightness(0.85) drop-shadow(0 0 30px rgba(0, 0, 0, 0.5));
+    /* Fade the harsh bottom cut into the background */
+    -webkit-mask-image: linear-gradient(to top, transparent 2%, black 20%);
+    mask-image: linear-gradient(to top, transparent 2%, black 20%);
     
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), outline-offset 0.4s ease, outline-color 0.4s ease, box-shadow 0.4s ease;
-}
-
-.hero-profile-cutout:hover {
-    transform: translate(-50%, -50%) scale(1.05);
-    outline-offset: 10px;
-    outline-color: #00ccff;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.9), 0 0 40px rgba(0, 204, 255, 0.3);
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .profile-container {
@@ -1133,16 +1123,9 @@ input:checked + .slider-simple .light-icon {
     color: #475569;
 }
 
-/* Light Theme - Photo Frame Fix */
+/* Light Theme - Photo Cutout Fix */
 :root[data-theme="light"] .hero-profile-cutout {
-    border-color: rgba(0, 136, 204, 0.4);
-    outline-color: rgba(0, 136, 204, 0.8);
-    background: linear-gradient(135deg, rgba(0, 204, 255, 0.05) 0%, rgba(255, 255, 255, 0.5) 100%);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-:root[data-theme="light"] .hero-profile-cutout:hover {
-    outline-color: #00ccff;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 136, 204, 0.2);
+    filter: grayscale(100%) contrast(1.05) brightness(1.1) drop-shadow(0 0 30px rgba(255, 255, 255, 0.6));
 }
 
 /* Light Theme - Button Overrides */
